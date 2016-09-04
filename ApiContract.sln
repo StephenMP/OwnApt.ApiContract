@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ApiContract", "src\ApiContract\ApiContract.xproj", "{BB98AB8D-DCA9-41E4-9F39-CFBCD9B2E78D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4D0911E9-382B-43C5-B1EC-12EA75BBED03}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ApiContract.Tests.Component", "test\ApiContract.Tests.Component\ApiContract.Tests.Component.xproj", "{E68235F6-87C6-4924-A6EA-28FA68553B65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,16 @@ Global
 		{BB98AB8D-DCA9-41E4-9F39-CFBCD9B2E78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB98AB8D-DCA9-41E4-9F39-CFBCD9B2E78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB98AB8D-DCA9-41E4-9F39-CFBCD9B2E78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E68235F6-87C6-4924-A6EA-28FA68553B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E68235F6-87C6-4924-A6EA-28FA68553B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E68235F6-87C6-4924-A6EA-28FA68553B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E68235F6-87C6-4924-A6EA-28FA68553B65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BB98AB8D-DCA9-41E4-9F39-CFBCD9B2E78D} = {86576F3A-94E3-436A-9DF2-3D1C4897EDF8}
+		{E68235F6-87C6-4924-A6EA-28FA68553B65} = {4D0911E9-382B-43C5-B1EC-12EA75BBED03}
 	EndGlobalSection
 EndGlobal
