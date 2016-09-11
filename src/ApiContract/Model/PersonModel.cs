@@ -7,7 +7,7 @@ namespace OwnApt.Api.Contract.Model
 {
     public class PersonModel : Equatable<PersonModel>
     {
-        #region Public Properties
+        #region Properties
 
         public int Age { get; set; }
         public ContactDto Contact { get; set; }
@@ -18,9 +18,9 @@ namespace OwnApt.Api.Contract.Model
         public string[] PropertyIds { get; set; }
         public PersonType Type { get; set; }
 
-        #endregion Public Properties
+        #endregion Properties
 
-        #region Public Methods
+        #region Methods
 
         public override int GetHashCode()
         {
@@ -34,6 +34,6 @@ namespace OwnApt.Api.Contract.Model
                 ^ this.Contact.GetHashCodeSafe();
         }
 
-        #endregion Public Methods
+        #endregion Methods
     }
 }

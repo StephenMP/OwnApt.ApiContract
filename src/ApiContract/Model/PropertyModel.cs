@@ -7,7 +7,7 @@ namespace OwnApt.Api.Contract.Model
 {
     public class PropertyModel : Equatable<PropertyModel>
     {
-        #region Public Properties
+        #region Properties
 
         public AddressDto Address { get; set; }
         public FeaturesDto Features { get; set; }
@@ -16,9 +16,9 @@ namespace OwnApt.Api.Contract.Model
         public PropertyType PropertyType { get; set; }
         public string[] TenantIds { get; set; }
 
-        #endregion Public Properties
+        #endregion Properties
 
-        #region Public Methods
+        #region Methods
 
         public override int GetHashCode()
         {
@@ -30,6 +30,6 @@ namespace OwnApt.Api.Contract.Model
                 ^ this.PropertyType.GetHashCodeSafe();
         }
 
-        #endregion Public Methods
+        #endregion Methods
     }
 }

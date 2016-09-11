@@ -6,7 +6,7 @@ namespace ApiContract.Tests.Component
 {
     public class EquatableTests
     {
-        #region Public Methods
+        #region Methods
 
         [Fact]
         public void Address()
@@ -182,10 +182,6 @@ namespace ApiContract.Tests.Component
             DoAsserts(orig, copy);
         }
 
-        #endregion Public Methods
-
-        #region Private Methods
-
         private static void DoAsserts<T>(T orig, T copy)
         {
             Assert.NotNull(orig);
@@ -193,6 +189,6 @@ namespace ApiContract.Tests.Component
             Assert.Equal(orig, copy);
         }
 
-        #endregion Private Methods
+        #endregion Methods
     }
 }

@@ -6,16 +6,16 @@ namespace OwnApt.Api.Contract.Model
 {
     public class UserLoginModel : Equatable<UserLoginModel>
     {
-        #region Public Properties
+        #region Properties
 
         public string Email { get; set; }
         public string Password { get; set; }
         public string UserId { get; set; }
         public PasswordVerificationResult VerificationResult { get; set; }
 
-        #endregion Public Properties
+        #endregion Properties
 
-        #region Public Methods
+        #region Methods
 
         public override int GetHashCode()
         {
@@ -25,6 +25,6 @@ namespace OwnApt.Api.Contract.Model
                 ^ this.VerificationResult.GetHashCodeSafe();
         }
 
-        #endregion Public Methods
+        #endregion Methods
     }
 }

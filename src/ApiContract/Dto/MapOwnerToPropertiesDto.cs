@@ -1,15 +1,14 @@
 ﻿using OwnApt.Common.Dto;
-using OwnApt.Common.Enum;
 using OwnApt.Common.Extension;
 
 namespace OwnApt.Api.Contract.Dto
 {
-    public class ParkingDto : Equatable<ParkingDto>
+    public class MapOwnerToPropertiesDto : Equatable<MapOwnerToPropertiesDto>
     {
         #region Properties
 
-        public string Description { get; set; }
-        public ParkingType Type { get; set; }
+        public string OwnerId { get; set; }
+        public string[] PropertyIds { get; set; }
 
         #endregion Properties
 
@@ -17,8 +16,8 @@ namespace OwnApt.Api.Contract.Dto
 
         public override int GetHashCode()
         {
-            return this.Type.GetHashCodeSafe()
-                ^ this.Description.GetHashCodeSafe();
+            return OwnerId.GetHashCodeSafe()
+                ^ PropertyIds.GetHashCodeSafe()
         }
 
         #endregion Methods

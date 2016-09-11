@@ -6,14 +6,14 @@ namespace OwnApt.Api.Contract.Dto
 {
     public class AmmenityDto : Equatable<AmmenityDto>
     {
-        #region Public Properties
+        #region Properties
 
         public string Description { get; set; }
         public AmmenityType Type { get; set; }
 
-        #endregion Public Properties
+        #endregion Properties
 
-        #region Public Methods
+        #region Methods
 
         public override int GetHashCode()
         {
@@ -21,6 +21,6 @@ namespace OwnApt.Api.Contract.Dto
                        ^ this.Type.GetHashCodeSafe();
         }
 
-        #endregion Public Methods
+        #endregion Methods
     }
 }

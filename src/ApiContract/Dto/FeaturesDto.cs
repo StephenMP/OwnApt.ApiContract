@@ -5,7 +5,7 @@ namespace OwnApt.Api.Contract.Dto
 {
     public class FeaturesDto : Equatable<FeaturesDto>
     {
-        #region Public Properties
+        #region Properties
 
         public AmmenityDto[] Ammentities { get; set; }
         public double Bathrooms { get; set; }
@@ -13,9 +13,9 @@ namespace OwnApt.Api.Contract.Dto
         public ParkingDto Parking { get; set; }
         public int Rooms { get; set; }
 
-        #endregion Public Properties
+        #endregion Properties
 
-        #region Public Methods
+        #region Methods
 
         public override int GetHashCode()
         {
@@ -26,6 +26,6 @@ namespace OwnApt.Api.Contract.Dto
                 ^ this.Parking.GetHashCodeSafe();
         }
 
-        #endregion Public Methods
+        #endregion Methods
     }
 }

@@ -6,7 +6,7 @@ namespace OwnApt.Api.Contract.Dto
 {
     public class PhoneDto : Equatable<PhoneDto>
     {
-        #region Public Properties
+        #region Properties
 
         public int AreaCode { get; set; }
         public int CountryCode { get; set; }
@@ -14,9 +14,9 @@ namespace OwnApt.Api.Contract.Dto
         public int Prefix { get; set; }
         public PhoneType Type { get; set; }
 
-        #endregion Public Properties
+        #endregion Properties
 
-        #region Public Methods
+        #region Methods
 
         public override int GetHashCode()
         {
@@ -27,6 +27,6 @@ namespace OwnApt.Api.Contract.Dto
                 ^ this.LineNumber.GetHashCodeSafe();
         }
 
-        #endregion Public Methods
+        #endregion Methods
     }
 }

@@ -6,7 +6,7 @@ namespace OwnApt.Api.Contract.Dto
 {
     public class AddressDto : Equatable<AddressDto>
     {
-        #region Public Properties
+        #region Properties
 
         public string Address1 { get; set; }
         public string Address2 { get; set; }
@@ -15,9 +15,9 @@ namespace OwnApt.Api.Contract.Dto
         public State State { get; set; }
         public ZipDto Zip { get; set; }
 
-        #endregion Public Properties
+        #endregion Properties
 
-        #region Public Methods
+        #region Methods
 
         public override int GetHashCode()
         {
@@ -29,6 +29,6 @@ namespace OwnApt.Api.Contract.Dto
                        ^ this.Zip.GetHashCodeSafe();
         }
 
-        #endregion Public Methods
+        #endregion Methods
     }
 }
