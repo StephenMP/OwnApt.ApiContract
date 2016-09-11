@@ -17,7 +17,7 @@ namespace OwnApt.Api.Contract.Dto
         public override int GetHashCode()
         {
             return OwnerId.GetHashCodeSafe()
-                ^ PropertyIds.GetHashCodeSafe()
+                ^ PropertyIds.GetHashCodeSafe();
         }
 
         #endregion Methods
