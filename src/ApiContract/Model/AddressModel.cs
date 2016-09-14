@@ -2,9 +2,9 @@
 using OwnApt.Common.Enum;
 using OwnApt.Common.Extension;
 
-namespace OwnApt.Api.Contract.Dto
+namespace OwnApt.Api.Contract.Model
 {
-    public class AddressDto : Equatable<AddressDto>
+    public class AddressModel : Equatable<AddressModel>
     {
         #region Properties
 
@@ -13,7 +13,7 @@ namespace OwnApt.Api.Contract.Dto
         public string City { get; set; }
         public string County { get; set; }
         public State State { get; set; }
-        public ZipDto Zip { get; set; }
+        public ZipModel Zip { get; set; }
 
         #endregion Properties
 

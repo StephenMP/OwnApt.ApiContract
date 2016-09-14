@@ -2,6 +2,7 @@
 using OwnApt.Common.Dto;
 using OwnApt.Common.Enum;
 using OwnApt.Common.Extension;
+using System.Collections.Generic;
 
 namespace OwnApt.Api.Contract.Model
 {
@@ -9,12 +10,12 @@ namespace OwnApt.Api.Contract.Model
     {
         #region Properties
 
-        public AddressDto Address { get; set; }
-        public FeaturesDto Features { get; set; }
+        public AddressModel Address { get; set; }
+        public FeaturesModel Features { get; set; }
         public string Id { get; set; }
-        public string[] OwnerIds { get; set; }
+        public IList<string> OwnerIds { get; set; }
         public PropertyType PropertyType { get; set; }
-        public string[] TenantIds { get; set; }
+        public IList<string> TenantIds { get; set; }
 
         #endregion Properties
 

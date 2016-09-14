@@ -1,5 +1,7 @@
-﻿using OwnApt.Api.Contract.Dto;
+﻿using OwnApt.Api.Contract.Model;
 using OwnApt.Common.Enum;
+using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace ApiContract.Tests.Component
@@ -9,186 +11,114 @@ namespace ApiContract.Tests.Component
         #region Methods
 
         [Fact]
-        public void Address()
+        public void CanEquatePropertyModels()
         {
-            var orig = new AddressDto
+            var addressModel = Random.AddressModel;
+            var features = Random.FeaturesModel;
+            var id = Random.String;
+            var ownerIds = new List<string> { Random.String };
+            var tenantIds = new List<string> { Random.String };
+            var propertyType = Random.PropertyType;
+
+            var orig = new PropertyModel
             {
-                Address1 = "Address1",
-                Address2 = "Address2",
-                City = "City",
-                County = "County",
-                State = State.AK,
-                Zip = new ZipDto
-                {
-                    Base = "Base",
-                    Extension = "Extension"
-                }
+                Address = addressModel,
+                Features = features,
+                Id = id,
+                OwnerIds = ownerIds,
+                PropertyType = propertyType,
+                TenantIds = tenantIds
             };
 
-            var copy = new AddressDto
+            var copy = new PropertyModel
             {
-                Address1 = "Address1",
-                Address2 = "Address2",
-                City = "City",
-                County = "County",
-                State = State.AK,
-                Zip = new ZipDto
-                {
-                    Base = "Base",
-                    Extension = "Extension"
-                }
+                Address = addressModel,
+                Features = features,
+                Id = id,
+                OwnerIds = ownerIds,
+                PropertyType = propertyType,
+                TenantIds = tenantIds
             };
 
-            DoAsserts(orig, copy);
-        }
-
-        [Fact]
-        public void Ammenity()
-        {
-            var orig = new AmmenityDto
-            {
-                Description = "Description",
-                Type = AmmenityType.Fireplace
-            };
-
-            var copy = new AmmenityDto
-            {
-                Description = "Description",
-                Type = AmmenityType.Fireplace
-            };
-
-            DoAsserts(orig, copy);
-        }
-
-        [Fact]
-        public void Contact()
-        {
-            var orig = new ContactDto
-            {
-                Email = "Email",
-                Phones = new PhoneDto[]
-                {
-                    new PhoneDto
-                    {
-                        AreaCode = 1234,
-                        CountryCode = 2345,
-                        LineNumber = 3456,
-                        Prefix = 4567,
-                        Type = PhoneType.Cell
-                    }
-                }
-            };
-
-            var copy = new ContactDto
-            {
-                Email = "Email",
-                Phones = new PhoneDto[]
-                {
-                    new PhoneDto
-                    {
-                        AreaCode = 1234,
-                        CountryCode = 2345,
-                        LineNumber = 3456,
-                        Prefix = 4567,
-                        Type = PhoneType.Cell
-                    }
-                }
-            };
-
-            DoAsserts(orig, copy);
-        }
-
-        [Fact]
-        public void Features()
-        {
-            var orig = new FeaturesDto
-            {
-                Ammentities = new AmmenityDto[]
-                {
-                    new AmmenityDto
-                    {
-                        Description = "Description",
-                        Type = AmmenityType.Fireplace
-                    }
-                },
-                Bathrooms = 1234,
-                Levels = 1234,
-                Parking = new ParkingDto
-                {
-                    Description = "Description",
-                    Type = ParkingType.Garage
-                },
-                Rooms = 1234
-            };
-
-            var copy = new FeaturesDto
-            {
-                Ammentities = new AmmenityDto[]
-                {
-                    new AmmenityDto
-                    {
-                        Description = "Description",
-                        Type = AmmenityType.Fireplace
-                    }
-                },
-                Bathrooms = 1234,
-                Levels = 1234,
-                Parking = new ParkingDto
-                {
-                    Description = "Description",
-                    Type = ParkingType.Garage
-                },
-                Rooms = 1234
-            };
-
-            DoAsserts(orig, copy);
-        }
-
-        [Fact]
-        public void Name()
-        {
-            var orig = new NameDto
-            {
-                FirstName = "FirstName",
-                LastName = "LastName",
-                MiddleName = "MiddleName"
-            };
-
-            var copy = new NameDto
-            {
-                FirstName = "FirstName",
-                LastName = "LastName",
-                MiddleName = "MiddleName"
-            };
-
-            DoAsserts(orig, copy);
-        }
-
-        [Fact]
-        public void ParkingDto()
-        {
-            var orig = new ParkingDto
-            {
-                Description = "Description",
-                Type = ParkingType.Garage
-            };
-
-            var copy = new ParkingDto
-            {
-                Description = "Description",
-                Type = ParkingType.Garage
-            };
-
-            DoAsserts(orig, copy);
-        }
-
-        private static void DoAsserts<T>(T orig, T copy)
-        {
-            Assert.NotNull(orig);
-            Assert.NotNull(copy);
             Assert.Equal(orig, copy);
         }
 
+        [Fact]
+        public void CannotEquateUnequalPropertyModels()
+        {
+            var orig = new PropertyModel
+            {
+                Address = Random.AddressModel,
+                Features = Random.FeaturesModel,
+                Id = Random.String,
+                OwnerIds = new List<string> { Random.String },
+                PropertyType = PropertyType.Duplex,
+                TenantIds = new List<string> { Random.String }
+            };
+
+            var copy = new PropertyModel
+            {
+                Address = Random.AddressModel,
+                Features = Random.FeaturesModel,
+                Id = Random.String,
+                OwnerIds = new List<string> { Random.String },
+                PropertyType = PropertyType.Duplex,
+                TenantIds = new List<string> { Random.String }
+            };
+
+            Assert.NotEqual(orig, copy);
+        }
+
         #endregion Methods
+    }
+
+    internal static class Random
+    {
+        #region Properties
+
+        internal static AddressModel AddressModel => new AddressModel
+        {
+            Address1 = Random.String,
+            Address2 = Random.String,
+            City = Random.String,
+            County = Random.String,
+            State = Random.State,
+            Zip = Random.ZipModel
+        };
+
+        internal static AmenityModel AmenityModel => new AmenityModel
+        {
+            Type = Random.String,
+            Description = Random.String
+        };
+
+        internal static FeaturesModel FeaturesModel => new FeaturesModel
+        {
+            Ammentities = new List<AmenityModel>() { Random.AmenityModel, Random.AmenityModel, Random.AmenityModel },
+            Bathrooms = Random.Int,
+            Levels = Random.Int,
+            Parking = new List<ParkingModel> { Random.ParkingModel, Random.ParkingModel, Random.ParkingModel },
+            Rooms = Random.Int
+        };
+
+        internal static int Int => new System.Random().Next();
+
+        internal static ParkingModel ParkingModel => new ParkingModel
+        {
+            Type = Random.String,
+            Description = Random.String
+        };
+
+        internal static PropertyType PropertyType => (PropertyType)new System.Random().Next(3);
+        internal static State State => (State)new System.Random().Next(50);
+        internal static string String => Guid.NewGuid().ToString();
+
+        internal static ZipModel ZipModel => new ZipModel
+        {
+            Base = Random.String,
+            Extension = Random.String
+        };
+
+        #endregion Properties
     }
 }

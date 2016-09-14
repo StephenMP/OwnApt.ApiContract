@@ -2,9 +2,9 @@
 using OwnApt.Common.Enum;
 using OwnApt.Common.Extension;
 
-namespace OwnApt.Api.Contract.Dto
+namespace OwnApt.Api.Contract.Model
 {
-    public class PhoneDto : Equatable<PhoneDto>
+    public class PhoneModel : Equatable<PhoneModel>
     {
         #region Properties
 

@@ -1,9 +1,9 @@
 ﻿using OwnApt.Common.Dto;
 using OwnApt.Common.Extension;
 
-namespace OwnApt.Api.Contract.Dto
+namespace OwnApt.Api.Contract.Model
 {
-    public class NameDto : Equatable<NameDto>
+    public class NameModel : Equatable<NameModel>
     {
         #region Properties
 

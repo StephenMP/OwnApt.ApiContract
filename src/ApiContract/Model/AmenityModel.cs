@@ -2,14 +2,14 @@
 using OwnApt.Common.Enum;
 using OwnApt.Common.Extension;
 
-namespace OwnApt.Api.Contract.Dto
+namespace OwnApt.Api.Contract.Model
 {
-    public class AmmenityDto : Equatable<AmmenityDto>
+    public class AmenityModel : Equatable<AmenityModel>
     {
         #region Properties
 
         public string Description { get; set; }
-        public AmmenityType Type { get; set; }
+        public string Type { get; set; }
 
         #endregion Properties
 

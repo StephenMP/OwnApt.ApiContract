@@ -10,11 +10,11 @@ namespace OwnApt.Api.Contract.Model
         #region Properties
 
         public int Age { get; set; }
-        public ContactDto Contact { get; set; }
+        public ContactModel Contact { get; set; }
         public int CreditScore { get; set; }
         public Gender Gender { get; set; }
         public string Id { get; set; }
-        public NameDto Name { get; set; }
+        public NameModel Name { get; set; }
         public string[] PropertyIds { get; set; }
         public PersonType Type { get; set; }
 

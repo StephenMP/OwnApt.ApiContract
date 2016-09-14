@@ -1,16 +1,17 @@
 ﻿using OwnApt.Common.Dto;
 using OwnApt.Common.Extension;
+using System.Collections.Generic;
 
-namespace OwnApt.Api.Contract.Dto
+namespace OwnApt.Api.Contract.Model
 {
-    public class FeaturesDto : Equatable<FeaturesDto>
+    public class FeaturesModel : Equatable<FeaturesModel>
     {
         #region Properties
 
-        public AmmenityDto[] Ammentities { get; set; }
+        public IList<AmenityModel> Ammentities { get; set; }
         public double Bathrooms { get; set; }
         public int Levels { get; set; }
-        public ParkingDto Parking { get; set; }
+        public IList<ParkingModel> Parking { get; set; }
         public int Rooms { get; set; }
 
         #endregion Properties

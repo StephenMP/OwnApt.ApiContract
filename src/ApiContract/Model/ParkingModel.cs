@@ -2,14 +2,14 @@
 using OwnApt.Common.Enum;
 using OwnApt.Common.Extension;
 
-namespace OwnApt.Api.Contract.Dto
+namespace OwnApt.Api.Contract.Model
 {
-    public class ParkingDto : Equatable<ParkingDto>
+    public class ParkingModel : Equatable<ParkingModel>
     {
         #region Properties
 
         public string Description { get; set; }
-        public ParkingType Type { get; set; }
+        public string Type { get; set; }
 
         #endregion Properties
 
