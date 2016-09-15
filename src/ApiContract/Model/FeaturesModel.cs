@@ -7,7 +7,7 @@ namespace OwnApt.Api.Contract.Model
     {
         #region Public Properties
 
-        public IList<AmenityModel> Ammentities { get; set; }
+        public IList<AmenityModel> Amentities { get; set; }
         public double Bathrooms { get; set; }
         public int Levels { get; set; }
         public IList<ParkingModel> Parking { get; set; }
