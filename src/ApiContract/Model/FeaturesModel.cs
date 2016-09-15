@@ -12,6 +12,7 @@ namespace OwnApt.Api.Contract.Model
         public int Levels { get; set; }
         public IList<ParkingModel> Parking { get; set; }
         public int Rooms { get; set; }
+        public int SqFootage { get; set; }
 
         #endregion Public Properties
     }
