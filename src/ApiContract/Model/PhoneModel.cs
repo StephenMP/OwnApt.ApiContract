@@ -1,10 +1,9 @@
 ﻿using OwnApt.Common.Dto;
 using OwnApt.Common.Enum;
-using OwnApt.Common.Extension;
 
 namespace OwnApt.Api.Contract.Model
 {
-    public class PhoneModel : Equatable<PhoneModel>
+    public class PhoneModel : Equatable
     {
         #region Public Properties
 
@@ -15,18 +14,5 @@ namespace OwnApt.Api.Contract.Model
         public PhoneType Type { get; set; }
 
         #endregion Public Properties
-
-        #region Public Methods
-
-        public override int GetHashCode()
-        {
-            return this.Type.GetHashCodeSafe()
-                ^ this.CountryCode.GetHashCodeSafe()
-                ^ this.AreaCode.GetHashCodeSafe()
-                ^ this.Prefix.GetHashCodeSafe()
-                ^ this.LineNumber.GetHashCodeSafe();
-        }
-
-        #endregion Public Methods
     }
 }

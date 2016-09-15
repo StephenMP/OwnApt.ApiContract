@@ -1,9 +1,8 @@
 ﻿using OwnApt.Common.Dto;
-using OwnApt.Common.Extension;
 
 namespace OwnApt.Api.Contract.Model
 {
-    public class ParkingModel : Equatable<ParkingModel>
+    public class ParkingModel : Equatable
     {
         #region Public Properties
 
@@ -11,15 +10,5 @@ namespace OwnApt.Api.Contract.Model
         public string Type { get; set; }
 
         #endregion Public Properties
-
-        #region Public Methods
-
-        public override int GetHashCode()
-        {
-            return this.Type.GetHashCodeSafe()
-                ^ this.Description.GetHashCodeSafe();
-        }
-
-        #endregion Public Methods
     }
 }

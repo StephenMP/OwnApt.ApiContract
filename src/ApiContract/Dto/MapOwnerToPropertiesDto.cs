@@ -1,9 +1,8 @@
 ﻿using OwnApt.Common.Dto;
-using OwnApt.Common.Extension;
 
 namespace OwnApt.Api.Contract.Dto
 {
-    public class MapOwnerToPropertiesDto : Equatable<MapOwnerToPropertiesDto>
+    public class MapOwnerToPropertiesDto : Equatable
     {
         #region Public Properties
 
@@ -11,15 +10,5 @@ namespace OwnApt.Api.Contract.Dto
         public string[] PropertyIds { get; set; }
 
         #endregion Public Properties
-
-        #region Public Methods
-
-        public override int GetHashCode()
-        {
-            return OwnerId.GetHashCodeSafe()
-                ^ PropertyIds.GetHashCodeSafe();
-        }
-
-        #endregion Public Methods
     }
 }

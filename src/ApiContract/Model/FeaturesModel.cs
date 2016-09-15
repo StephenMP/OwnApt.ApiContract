@@ -1,10 +1,9 @@
 ﻿using OwnApt.Common.Dto;
-using OwnApt.Common.Extension;
 using System.Collections.Generic;
 
 namespace OwnApt.Api.Contract.Model
 {
-    public class FeaturesModel : Equatable<FeaturesModel>
+    public class FeaturesModel : Equatable
     {
         #region Public Properties
 
@@ -15,18 +14,5 @@ namespace OwnApt.Api.Contract.Model
         public int Rooms { get; set; }
 
         #endregion Public Properties
-
-        #region Public Methods
-
-        public override int GetHashCode()
-        {
-            return this.Rooms.GetHashCodeSafe()
-                ^ this.Bathrooms.GetHashCodeSafe()
-                ^ this.Ammentities.GetHashCodeSafe()
-                ^ this.Levels.GetHashCodeSafe()
-                ^ this.Parking.GetHashCodeSafe();
-        }
-
-        #endregion Public Methods
     }
 }

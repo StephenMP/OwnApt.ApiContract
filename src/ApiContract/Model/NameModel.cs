@@ -1,9 +1,8 @@
 ﻿using OwnApt.Common.Dto;
-using OwnApt.Common.Extension;
 
 namespace OwnApt.Api.Contract.Model
 {
-    public class NameModel : Equatable<NameModel>
+    public class NameModel : Equatable
     {
         #region Public Properties
 
@@ -12,16 +11,5 @@ namespace OwnApt.Api.Contract.Model
         public string MiddleName { get; set; }
 
         #endregion Public Properties
-
-        #region Public Methods
-
-        public override int GetHashCode()
-        {
-            return this.FirstName.GetHashCodeSafe()
-                ^ this.MiddleName.GetHashCodeSafe()
-                ^ this.LastName.GetHashCodeSafe();
-        }
-
-        #endregion Public Methods
     }
 }

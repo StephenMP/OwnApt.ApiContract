@@ -1,10 +1,9 @@
 ﻿using OwnApt.Common.Dto;
 using OwnApt.Common.Enum;
-using OwnApt.Common.Extension;
 
 namespace OwnApt.Api.Contract.Model
 {
-    public class AddressModel : Equatable<AddressModel>
+    public class AddressModel : Equatable
     {
         #region Public Properties
 
@@ -16,19 +15,5 @@ namespace OwnApt.Api.Contract.Model
         public ZipModel Zip { get; set; }
 
         #endregion Public Properties
-
-        #region Public Methods
-
-        public override int GetHashCode()
-        {
-            return this.Address1.GetHashCodeSafe()
-                       ^ this.Address2.GetHashCodeSafe()
-                       ^ this.City.GetHashCodeSafe()
-                       ^ this.County.GetHashCodeSafe()
-                       ^ this.State.GetHashCodeSafe()
-                       ^ this.Zip.GetHashCodeSafe();
-        }
-
-        #endregion Public Methods
     }
 }

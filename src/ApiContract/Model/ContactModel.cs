@@ -1,25 +1,16 @@
 ﻿using OwnApt.Common.Dto;
-using OwnApt.Common.Extension;
+using System.Collections.Generic;
 
 namespace OwnApt.Api.Contract.Model
 {
-    public class ContactModel : Equatable<ContactModel>
+    public class ContactModel : Equatable
     {
         #region Public Properties
 
         public string Email { get; set; }
-        public PhoneModel[] Phones { get; set; }
+        public AddressModel HomeAddress { get; set; }
+        public IList<PhoneModel> Phones { get; set; }
 
         #endregion Public Properties
-
-        #region Public Methods
-
-        public override int GetHashCode()
-        {
-            return this.Email.GetHashCodeSafe()
-                 ^ this.Phones.GetHashCodeSafe();
-        }
-
-        #endregion Public Methods
     }
 }
