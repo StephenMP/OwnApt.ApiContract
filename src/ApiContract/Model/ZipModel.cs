@@ -5,14 +5,14 @@ namespace OwnApt.Api.Contract.Model
 {
     public class ZipModel : Equatable<ZipModel>
     {
-        #region Properties
+        #region Public Properties
 
         public string Base { get; set; }
         public string Extension { get; set; }
 
-        #endregion Properties
+        #endregion Public Properties
 
-        #region Methods
+        #region Public Methods
 
         public override int GetHashCode()
         {
@@ -20,6 +20,6 @@ namespace OwnApt.Api.Contract.Model
                 ^ this.Extension.GetHashCodeSafe();
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 }

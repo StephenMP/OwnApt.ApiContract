@@ -5,15 +5,15 @@ namespace OwnApt.Api.Contract.Model
 {
     public class NameModel : Equatable<NameModel>
     {
-        #region Properties
+        #region Public Properties
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MiddleName { get; set; }
 
-        #endregion Properties
+        #endregion Public Properties
 
-        #region Methods
+        #region Public Methods
 
         public override int GetHashCode()
         {
@@ -22,6 +22,6 @@ namespace OwnApt.Api.Contract.Model
                 ^ this.LastName.GetHashCodeSafe();
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 }

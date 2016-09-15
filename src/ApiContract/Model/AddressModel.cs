@@ -6,7 +6,7 @@ namespace OwnApt.Api.Contract.Model
 {
     public class AddressModel : Equatable<AddressModel>
     {
-        #region Properties
+        #region Public Properties
 
         public string Address1 { get; set; }
         public string Address2 { get; set; }
@@ -15,9 +15,9 @@ namespace OwnApt.Api.Contract.Model
         public State State { get; set; }
         public ZipModel Zip { get; set; }
 
-        #endregion Properties
+        #endregion Public Properties
 
-        #region Methods
+        #region Public Methods
 
         public override int GetHashCode()
         {
@@ -29,6 +29,6 @@ namespace OwnApt.Api.Contract.Model
                        ^ this.Zip.GetHashCodeSafe();
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 }

@@ -5,14 +5,14 @@ namespace OwnApt.Api.Contract.Dto
 {
     public class MapOwnerToPropertiesDto : Equatable<MapOwnerToPropertiesDto>
     {
-        #region Properties
+        #region Public Properties
 
         public string OwnerId { get; set; }
         public string[] PropertyIds { get; set; }
 
-        #endregion Properties
+        #endregion Public Properties
 
-        #region Methods
+        #region Public Methods
 
         public override int GetHashCode()
         {
@@ -20,6 +20,6 @@ namespace OwnApt.Api.Contract.Dto
                 ^ PropertyIds.GetHashCodeSafe();
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 }

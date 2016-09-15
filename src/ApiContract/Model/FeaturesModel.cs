@@ -6,7 +6,7 @@ namespace OwnApt.Api.Contract.Model
 {
     public class FeaturesModel : Equatable<FeaturesModel>
     {
-        #region Properties
+        #region Public Properties
 
         public IList<AmenityModel> Ammentities { get; set; }
         public double Bathrooms { get; set; }
@@ -14,9 +14,9 @@ namespace OwnApt.Api.Contract.Model
         public IList<ParkingModel> Parking { get; set; }
         public int Rooms { get; set; }
 
-        #endregion Properties
+        #endregion Public Properties
 
-        #region Methods
+        #region Public Methods
 
         public override int GetHashCode()
         {
@@ -27,6 +27,6 @@ namespace OwnApt.Api.Contract.Model
                 ^ this.Parking.GetHashCodeSafe();
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 }

@@ -6,7 +6,7 @@ namespace OwnApt.Api.Contract.Model
 {
     public class PhoneModel : Equatable<PhoneModel>
     {
-        #region Properties
+        #region Public Properties
 
         public int AreaCode { get; set; }
         public int CountryCode { get; set; }
@@ -14,9 +14,9 @@ namespace OwnApt.Api.Contract.Model
         public int Prefix { get; set; }
         public PhoneType Type { get; set; }
 
-        #endregion Properties
+        #endregion Public Properties
 
-        #region Methods
+        #region Public Methods
 
         public override int GetHashCode()
         {
@@ -27,6 +27,6 @@ namespace OwnApt.Api.Contract.Model
                 ^ this.LineNumber.GetHashCodeSafe();
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 }

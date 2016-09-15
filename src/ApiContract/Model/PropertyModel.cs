@@ -1,5 +1,4 @@
-﻿using OwnApt.Api.Contract.Dto;
-using OwnApt.Common.Dto;
+﻿using OwnApt.Common.Dto;
 using OwnApt.Common.Enum;
 using OwnApt.Common.Extension;
 using System.Collections.Generic;
@@ -8,7 +7,7 @@ namespace OwnApt.Api.Contract.Model
 {
     public class PropertyModel : Equatable<PropertyModel>
     {
-        #region Properties
+        #region Public Properties
 
         public AddressModel Address { get; set; }
         public FeaturesModel Features { get; set; }
@@ -17,9 +16,9 @@ namespace OwnApt.Api.Contract.Model
         public PropertyType PropertyType { get; set; }
         public IList<string> TenantIds { get; set; }
 
-        #endregion Properties
+        #endregion Public Properties
 
-        #region Methods
+        #region Public Methods
 
         public override int GetHashCode()
         {
@@ -31,6 +30,6 @@ namespace OwnApt.Api.Contract.Model
                 ^ this.PropertyType.GetHashCodeSafe();
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 }

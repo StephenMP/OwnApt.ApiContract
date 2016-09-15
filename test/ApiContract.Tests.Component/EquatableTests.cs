@@ -8,7 +8,7 @@ namespace ApiContract.Tests.Component
 {
     public class EquatableTests
     {
-        #region Methods
+        #region Public Methods
 
         [Fact]
         public void CanEquatePropertyModels()
@@ -69,12 +69,12 @@ namespace ApiContract.Tests.Component
             Assert.NotEqual(orig, copy);
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 
     internal static class Random
     {
-        #region Properties
+        #region Internal Properties
 
         internal static AddressModel AddressModel => new AddressModel
         {
@@ -94,7 +94,7 @@ namespace ApiContract.Tests.Component
 
         internal static FeaturesModel FeaturesModel => new FeaturesModel
         {
-            Ammentities = new List<AmenityModel>() { Random.AmenityModel, Random.AmenityModel, Random.AmenityModel },
+            Ammentities = new List<AmenityModel> { Random.AmenityModel, Random.AmenityModel, Random.AmenityModel },
             Bathrooms = Random.Int,
             Levels = Random.Int,
             Parking = new List<ParkingModel> { Random.ParkingModel, Random.ParkingModel, Random.ParkingModel },
@@ -119,6 +119,6 @@ namespace ApiContract.Tests.Component
             Extension = Random.String
         };
 
-        #endregion Properties
+        #endregion Internal Properties
     }
 }

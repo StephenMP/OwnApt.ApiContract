@@ -5,14 +5,14 @@ namespace OwnApt.Api.Contract.Model
 {
     public class ContactModel : Equatable<ContactModel>
     {
-        #region Properties
+        #region Public Properties
 
         public string Email { get; set; }
         public PhoneModel[] Phones { get; set; }
 
-        #endregion Properties
+        #endregion Public Properties
 
-        #region Methods
+        #region Public Methods
 
         public override int GetHashCode()
         {
@@ -20,6 +20,6 @@ namespace OwnApt.Api.Contract.Model
                  ^ this.Phones.GetHashCodeSafe();
         }
 
-        #endregion Methods
+        #endregion Public Methods
     }
 }
