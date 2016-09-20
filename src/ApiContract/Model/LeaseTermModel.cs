@@ -3,7 +3,7 @@ using System;
 
 namespace OwnApt.Api.Contract.Model
 {
-    public class TermModel : Equatable
+    public class LeaseTermModel : Equatable
     {
         #region Public Properties
 
