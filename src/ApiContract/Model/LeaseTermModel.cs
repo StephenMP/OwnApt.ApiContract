@@ -11,7 +11,7 @@ namespace OwnApt.Api.Contract.Model
         public string PropertyId { get; set; }
         public decimal Rent { get; set; }
         public DateTime StartDate { get; set; }
-        public string TermId { get; set; }
+        public string LeaseTermId { get; set; }
 
         #endregion Public Properties
     }
