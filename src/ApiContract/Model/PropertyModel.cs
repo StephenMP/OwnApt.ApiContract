@@ -11,9 +11,7 @@ namespace OwnApt.Api.Contract.Model
         public AddressModel Address { get; set; }
         public FeaturesModel Features { get; set; }
         public string Id { get; set; }
-        public IList<string> OwnerIds { get; set; }
         public PropertyType PropertyType { get; set; }
-        public IList<string> TenantIds { get; set; }
 
         #endregion Public Properties
     }
