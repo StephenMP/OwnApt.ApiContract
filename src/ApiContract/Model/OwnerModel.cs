@@ -15,7 +15,7 @@ namespace OwnApt.Api.Contract.Model
         public Gender Gender { get; set; }
         public string Id { get; set; }
         public NameModel Name { get; set; }
-        public IList<string> PropertyIds { get; set; }
+        public List<string> PropertyIds { get; set; }
 
         #endregion Public Properties
     }

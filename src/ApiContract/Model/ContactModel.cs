@@ -9,7 +9,7 @@ namespace OwnApt.Api.Contract.Model
 
         public string Email { get; set; }
         public AddressModel HomeAddress { get; set; }
-        public IList<PhoneModel> Phones { get; set; }
+        public List<PhoneModel> Phones { get; set; }
 
         #endregion Public Properties
     }
