@@ -1,6 +1,5 @@
 ﻿using OwnApt.Common.Dto;
 using OwnApt.Common.Enum;
-using System.Collections.Generic;
 
 namespace OwnApt.Api.Contract.Model
 {

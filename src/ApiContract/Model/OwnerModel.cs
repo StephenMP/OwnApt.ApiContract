@@ -1,5 +1,7 @@
 ﻿using OwnApt.Common.Dto;
 using OwnApt.Common.Enum;
+using System;
+using System.Collections.Generic;
 
 namespace OwnApt.Api.Contract.Model
 {
@@ -7,13 +9,13 @@ namespace OwnApt.Api.Contract.Model
     {
         #region Public Properties
 
-        public BirthdateModel Birthdate { get; set; }
+        public DateTime Birthdate { get; set; }
         public ContactModel Contact { get; set; }
         public ContactModel EmergencyContact { get; set; }
         public Gender Gender { get; set; }
         public string Id { get; set; }
         public NameModel Name { get; set; }
-        public string[] PropertyIds { get; set; }
+        public IList<string> PropertyIds { get; set; }
 
         #endregion Public Properties
     }
