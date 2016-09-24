@@ -1,16 +1,17 @@
-﻿using OwnApt.Common.Enum;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using OwnApt.Common.Dto;
+using OwnApt.Common.Enum;
 
 namespace OwnApt.Api.Contract.Model
 {
-    public class LeasePeriodModel
+    public class LeasePeriodModel : Equatable
     {
+        #region Public Properties
+
         public int LeasePeriodId { get; set; }
-        public int LeaseTermId { get; set; }
         public LeasePeriodStatus LeasePeriodStatus { get; set; }
+        public int LeaseTermId { get; set; }
         public string PeriodId { get; set; }
+
+        #endregion Public Properties
     }
 }
