@@ -4,7 +4,7 @@
   "dependencies": {
     "Microsoft.AspNetCore.Identity": "1.0.0",
     "NETStandard.Library": "1.6.0",
-    "OwnApt": "14.7450.9196"
+    "OwnApt": "14.7468.7966"
   },
 
   "frameworks": {
