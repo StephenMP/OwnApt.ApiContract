@@ -10,7 +10,7 @@ namespace OwnApt.Api.Contract.Model
         public int LeasePeriodId { get; set; }
         public LeasePeriodStatus LeasePeriodStatus { get; set; }
         public int LeaseTermId { get; set; }
-        public string PeriodId { get; set; }
+        public string Period { get; set; }
 
         #endregion Public Properties
     }
