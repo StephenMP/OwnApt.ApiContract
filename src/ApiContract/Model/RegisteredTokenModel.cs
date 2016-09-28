@@ -7,7 +7,7 @@ namespace OwnApt.Api.Contract.Model
         #region Public Properties
 
         public string Token { get; set; }
-        public string TokenId { get; set; }
+        public string Id { get; set; }
 
         #endregion Public Properties
     }
