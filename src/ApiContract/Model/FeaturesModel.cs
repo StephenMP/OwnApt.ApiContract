@@ -5,6 +5,16 @@ namespace OwnApt.Api.Contract.Model
 {
     public class FeaturesModel : Equatable
     {
+        #region Public Constructors
+
+        public FeaturesModel()
+        {
+            this.Amenities = new List<AmenityModel>();
+            this.Parking = new List<ParkingModel>();
+        }
+
+        #endregion Public Constructors
+
         #region Public Properties
 
         public List<AmenityModel> Amenities { get; set; }

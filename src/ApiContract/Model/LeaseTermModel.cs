@@ -6,6 +6,15 @@ namespace OwnApt.Api.Contract.Model
 {
     public class LeaseTermModel : Equatable
     {
+        #region Public Constructors
+
+        public LeaseTermModel()
+        {
+            this.LeasePeriods = new List<LeasePeriodModel>();
+        }
+
+        #endregion Public Constructors
+
         #region Public Properties
 
         public bool Active { get; set; }

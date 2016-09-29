@@ -7,6 +7,18 @@ namespace OwnApt.Api.Contract.Model
 {
     public class OwnerModel : Equatable
     {
+        #region Public Constructors
+
+        public OwnerModel()
+        {
+            this.Contact = new ContactModel();
+            this.EmergencyContact = new ContactModel();
+            this.Name = new NameModel();
+            this.PropertyIds = new List<string>();
+        }
+
+        #endregion Public Constructors
+
         #region Public Properties
 
         public DateTime Birthdate { get; set; }
