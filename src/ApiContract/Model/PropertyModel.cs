@@ -18,6 +18,7 @@ namespace OwnApt.Api.Contract.Model
 
         #region Public Properties
 
+        public string PropertyDescription { get; set; }
         public AddressModel Address { get; set; }
         public FeaturesModel Features { get; set; }
         public string Id { get; set; }
