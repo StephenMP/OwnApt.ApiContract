@@ -1,21 +1,11 @@
-﻿using OwnApt.Common.Dto;
+﻿using System;
+using OwnApt.Common.Dto;
 using OwnApt.Common.Enums;
-using System;
 
 namespace OwnApt.Api.Contract.Model
 {
     public class PropertyModel : Equatable
     {
-        #region Public Constructors
-
-        public PropertyModel()
-        {
-            this.Address = new AddressModel();
-            this.Features = new FeaturesModel();
-        }
-
-        #endregion Public Constructors
-
         #region Public Properties
 
         public AddressModel Address { get; set; }

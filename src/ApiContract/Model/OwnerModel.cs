@@ -1,7 +1,7 @@
-﻿using OwnApt.Common.Dto;
-using OwnApt.Common.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using OwnApt.Common.Dto;
+using OwnApt.Common.Enums;
 
 namespace OwnApt.Api.Contract.Model
 {
@@ -11,9 +11,6 @@ namespace OwnApt.Api.Contract.Model
 
         public OwnerModel()
         {
-            this.Contact = new ContactModel();
-            this.EmergencyContact = new ContactModel();
-            this.Name = new NameModel();
             this.PropertyIds = new List<string>();
         }
 

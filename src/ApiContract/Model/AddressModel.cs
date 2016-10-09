@@ -1,20 +1,11 @@
-﻿using OwnApt.Common.Dto;
+﻿using System.ComponentModel.DataAnnotations;
+using OwnApt.Common.Dto;
 using OwnApt.Common.Enums;
-using System.ComponentModel.DataAnnotations;
 
 namespace OwnApt.Api.Contract.Model
 {
     public class AddressModel : Equatable
     {
-        #region Public Constructors
-
-        public AddressModel()
-        {
-            this.Zip = new ZipModel();
-        }
-
-        #endregion Public Constructors
-
         #region Public Properties
 
         [Required]
